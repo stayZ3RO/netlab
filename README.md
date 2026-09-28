@@ -142,6 +142,8 @@ Proxmox / Omada / Pi-hole / Monitoring Services
 | Phase 4 - Wireless SSID Mapping | ⏳ Planned | SSID-to-VLAN mapping for trusted, guest, IoT, and lab wireless |
 | Phase 5 - Monitoring and Operations | ⏳ Planned | Monitoring updates, dashboards, runbooks, backups, validation procedures |
 
+Hardware refresh (2026-09-27): the ER605 and TL-SG2210P were replaced by a UniFi Dream Machine Pro and a USW-24-PoE in an equivalent-state cutover. The network stayed the same (flat `192.168.68.0/24`, same gateway, DHCP, and DNS), and the Deco units stay in AP mode. Phase 1 documents the ER605 and Omada cutover as it happened; Phase 2 onward runs on the UniFi hardware.
+
 ---
 
 ## Documentation
@@ -173,8 +175,8 @@ Proxmox / Omada / Pi-hole / Monitoring Services
 
 | Diagram | Status | Link |
 |---|---:|---|
-| Current Topology (Omada, flat) | Done | [View](diagrams/current-topology.md) |
-| Target Topology (UniFi) | Planned | with the router/switch migration |
+| Topology before the UniFi refresh (Omada, flat) | Done | [View](diagrams/current-topology.md) |
+| Current Topology (UniFi, flat) | Planned | Migration done 2026-09-27; diagram not drawn yet |
 | Phase 2 - VLAN Segmentation Design | Planned | Coming soon |
 | Phase 3 - Firewall Policy Flow | Planned | Coming soon |
 
