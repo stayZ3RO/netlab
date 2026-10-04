@@ -133,3 +133,7 @@ That is closer to real infrastructure work than a simple home network diagram.
 The next focus is Phase 2: VLAN segmentation.
 
 The goal is to move from a flat managed network to a segmented design with separate zones for trusted devices, infrastructure, IoT, guest access, and lab systems.
+
+## 2026-09-27 UniFi Equivalent-State Refresh
+
+The UDM Pro and USW-24-PoE replaced the ER605 and TL-SG2210P while the LAN stayed flat. Keeping the gateway, DHCP, DNS, and Deco AP behavior the same made the hardware change easier to validate. The ER605 and Omada screenshots remain Phase 1 evidence; current-state diagrams now show UniFi. Segmentation remains a separate planned change.

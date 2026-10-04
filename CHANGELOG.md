@@ -8,6 +8,17 @@
 
 ---
 
+### 2026-09-27 UniFi hardware refresh
+
+- Replaced the ER605 and TL-SG2210P with a UDM Pro and USW-24-PoE in an equivalent-state cutover.
+- Kept the LAN flat, with the same gateway, DHCP, DNS, and Deco AP behavior. VLAN segmentation and firewall policy remain planned.
+
+### Recent documentation merges
+
+- 2026-09-22: redacted the ER605 WAN and reservation screenshots (#9).
+- 2026-09-27: updated links to renamed public repositories (#11).
+- 2026-09-28: clarified README network status and wording (#12).
+
 ### Added
 
 - Initial project repository structure

@@ -5,15 +5,15 @@
 ![Phase](https://img.shields.io/badge/Phase-1%20Managed%20Cutover-purple)
 ![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
 
-## Phase 1 Complete: Managed Network Baseline Ready for VLAN Segmentation
+## UniFi Network Core Live; VLAN Segmentation Planned
 
 ---
 
 ## Project Status
 
-**Phase 1 is complete.**
+**Phase 1 and the 2026-09-27 UniFi hardware refresh are complete.**
 
-This repository currently documents the managed network cutover from a consumer mesh/router-controlled design to a dedicated router, managed switch, AP-mode wireless, and VLAN-ready network foundation.
+The current network core is a UniFi UDM Pro and USW-24-PoE. The LAN remains flat, with Deco nodes in AP mode. Phase 1 documents the earlier ER605 and Omada cutover as history.
 
 ---
 
@@ -21,8 +21,9 @@ This repository currently documents the managed network cutover from a consumer 
 
 | Area | Status | Notes |
 |---|---:|---|
-| ER605 router cutover | ✅ Complete | Router/firewall is now the primary routing device |
-| Managed switch integration | ✅ Complete | TL-SG2210P is in the production network path |
+| ER605 router cutover | ✅ Complete | Historical Phase 1 cutover, replaced by UniFi on 2026-09-27 |
+| Managed switch integration | ✅ Complete | Historical TL-SG2210P integration, replaced by USW-24-PoE |
+| UniFi hardware refresh | ✅ Complete | UDM Pro and USW-24-PoE form the current network core |
 | Deco AP mode migration | ✅ Complete | Deco mesh is no longer acting as the router |
 | DNS validation | ✅ Complete | Pi-hole HA DNS path remained operational |
 | DHCP validation | ✅ Complete | Clients received valid leases |
@@ -42,9 +43,9 @@ ONT
   ↓
 AT&T Gateway / IP Passthrough
   ↓
-TP-Link ER605 Router
+UniFi UDM Pro
   ↓
-TP-Link TL-SG2210P Managed Switch
+UniFi USW-24-PoE Managed Switch
   ├── Deco Mesh APs
   ├── Proxmox Host
   ├── Primary Pi-hole
@@ -87,9 +88,9 @@ This keeps the project clean:
 
 | Task | Status |
 |---|---:|
-| Add final physical topology diagram | ⏳ Pending |
+| Add current physical topology diagram | ✅ Complete |
 | Add final logical topology diagram | ⏳ Pending |
-| Add sanitized Omada screenshots | ⏳ Pending |
+| Add sanitized Phase 1 Omada screenshots | ✅ Complete |
 | Add switch port mapping | ⏳ Pending |
 | Start VLAN/subnet design | ⏳ Pending |
 | Build firewall policy matrix | ⏳ Pending |

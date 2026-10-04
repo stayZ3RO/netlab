@@ -10,7 +10,7 @@
 
 ## Overview
 
-This document links Phase 1 architecture diagrams for the managed network cutover.
+These text diagrams record the historical Phase 1 ER605 and Omada cutover before the 2026-09-27 UniFi refresh. The [current UniFi topology](../../diagrams/current-topology.md) shows the later network core.
 
 The diagrams should make the network easy to understand without requiring access to the actual environment.
 
@@ -29,7 +29,7 @@ The diagrams should make the network easy to understand without requiring access
 
 ## Diagram Gallery
 
-No diagrams are currently linked. Add diagrams to `diagrams/phase-1-managed-network-cutover/` when ready.
+The physical and DNS flow diagrams below record the historical Phase 1 cutover.
 
 ---
 

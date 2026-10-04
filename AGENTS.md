@@ -9,11 +9,11 @@ Read these first:
 
 ## Scope
 
-Project 2 of the home network lab: migration from consumer mesh/router to managed router/switch (ER605 + managed PoE switch), Omada SDN Controller, AP-mode wireless, redundant DNS, Proxmox-hosted services. Builds on `dns` (Project 1). This repo's own scope stops at the managed baseline. VLAN segmentation, firewall policy, and SSID-to-VLAN mapping are the next phase.
+Project 2 of the home network lab: the historical ER605/Omada cutover, followed by the 2026-09-27 UniFi UDM Pro and USW-24-PoE equivalent-state refresh. Deco remains in AP mode. Builds on `dns` (Project 1). The LAN is flat; VLAN segmentation, firewall policy, and SSID-to-VLAN mapping are planned.
 
 ## Directories
 
-`configs/`, `diagrams/`, `docs/`, `screenshots/`
+`configs/`, `diagrams/`, `docs/`, `screenshots/`, `screenshots-redacted/`
 
 ## Rules
 
