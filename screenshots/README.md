@@ -1,6 +1,6 @@
 # Screenshots
 
-![Status](https://img.shields.io/badge/Status-Planned-yellow)
+![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
 ![Security](https://img.shields.io/badge/Security-Sanitized%20Docs-red)
 ![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
@@ -9,7 +9,7 @@
 
 ---
 
-This folder contains sanitized screenshots used as validation evidence for the managed network infrastructure lab.
+The [redacted Phase 1 screenshots](../screenshots-redacted/phase-1-managed-network-cutover/) document the historical ER605 and Omada cutover. The current network uses a UniFi UDM Pro and USW-24-PoE, with Deco nodes in AP mode.
 
 ## Screenshot Categories
 

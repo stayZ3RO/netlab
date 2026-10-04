@@ -1,6 +1,6 @@
 # Architecture Diagrams
 
-![Status](https://img.shields.io/badge/Status-Planned-yellow)
+![Status](https://img.shields.io/badge/Status-Current-informational)
 ![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
 ![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
 
@@ -14,8 +14,8 @@ This folder contains architecture diagrams for the managed network infrastructur
 
 | Diagram | Status |
 |---|---:|
-| [Current Topology (Omada, flat)](current-topology.md) | Done |
-| Target Topology (UniFi) | Planned, with the router/switch migration |
+| [Current Topology (UniFi, flat)](current-topology.md) | Done |
+| [Phase 1 Diagrams (ER605 and Omada, historical)](../docs/phase-1-managed-network-cutover/diagrams.md) | Done |
 | Phase 2 - VLAN Segmentation Design | Planned |
 | Phase 3 - Firewall Policy Flow | Planned |
 

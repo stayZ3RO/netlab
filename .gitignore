@@ -19,6 +19,8 @@ Thumbs.db
 # Sensitive network exports
 configs/private/
 configs/raw/
+screenshots/raw/
+screenshots/unredacted/
 *.ovpn
 *.conf.private
 

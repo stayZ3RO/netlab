@@ -2,16 +2,16 @@
 
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
-![Routing](https://img.shields.io/badge/Routing-ER605-informational)
-![Switching](https://img.shields.io/badge/Switching-Managed%20PoE%20Switch-informational)
+![Routing](https://img.shields.io/badge/Routing-UDM%20Pro-informational)
+![Switching](https://img.shields.io/badge/Switching-USW--24--PoE-informational)
 ![DNS](https://img.shields.io/badge/DNS-Pi--hole%20HA-purple)
 ![Platform](https://img.shields.io/badge/Platform-Proxmox-orange)
 
-## Managed Router/Switch Cutover, Omada SDN, AP Mode, and VLAN-Ready Network Foundation
+## Managed Network Cutovers, UniFi, AP Mode, and VLAN-Ready Network Foundation
 
 ---
 
-This repository documents Project 2 of my home network infrastructure lab: the migration from a consumer mesh/router-controlled network to a managed network foundation using a dedicated router/firewall, managed switch, Omada SDN Controller, AP-mode wireless, redundant DNS, Proxmox-hosted services, and monitoring validation.
+This repository documents Project 2 of my home network infrastructure lab. Phase 1 records the ER605 and Omada cutover. A later equivalent-state refresh put a UniFi UDM Pro and USW-24-PoE at the network core on 2026-09-27. Deco nodes remain in AP mode, and the LAN remains flat. VLAN segmentation and firewall policy are planned.
 
 Project 1 focused on building reliable core infrastructure services such as HA DNS, Unbound recursive DNS, monitoring, alerting, Tailscale remote access, Proxmox-hosted services, and operational validation.
 
@@ -40,7 +40,7 @@ This project documents the cutover from a consumer home network design into a mo
 
 The main goal was to move routing and switching responsibilities away from the mesh system and into dedicated network infrastructure while keeping core services stable.
 
-This phase introduced:
+The original Phase 1 cutover introduced:
 
 - Dedicated routing with TP-Link ER605
 - Managed switching with TP-Link TL-SG2210P
@@ -79,9 +79,9 @@ ONT
   ↓
 AT&T Gateway / IP Passthrough
   ↓
-TP-Link ER605 Router / Firewall
+UniFi UDM Pro Router / Firewall
   ↓
-TP-Link TL-SG2210P Managed PoE Switch
+UniFi USW-24-PoE Managed Switch
   ├── Deco Mesh APs
   ├── Proxmox Host
   ├── Primary Pi-hole Node
@@ -95,7 +95,7 @@ TP-Link TL-SG2210P Managed PoE Switch
 ```text
 Client Device
   ↓
-ER605 DHCP-Provided DNS
+UDM Pro DHCP-Provided DNS
   ↓
 Pi-hole HA VIP
   ↓
@@ -127,7 +127,7 @@ Admin Endpoint
   ↓
 Trusted LAN / Tailscale
   ↓
-Proxmox / Omada / Pi-hole / Monitoring Services
+Proxmox / UniFi Network / Pi-hole / Monitoring Services
 ```
 
 ---
@@ -137,12 +137,13 @@ Proxmox / Omada / Pi-hole / Monitoring Services
 | Phase | Status | Focus |
 |---|---:|---|
 | Phase 1 - Managed Router/Switch Cutover | ✅ Complete | ER605 cutover, managed switch integration, Deco AP mode, baseline validation |
+| UniFi Hardware Refresh (2026-09-27) | ✅ Complete | UDM Pro and USW-24-PoE replaced the ER605 and TL-SG2210P without adding segmentation |
 | Phase 2 - VLAN Segmentation | ⏳ Planned | VLAN IDs, subnet plan, network zones, DHCP scopes |
 | Phase 3 - Firewall Policy | ⏳ Planned | Inter-VLAN rules, restricted management access, IoT/guest isolation |
 | Phase 4 - Wireless SSID Mapping | ⏳ Planned | SSID-to-VLAN mapping for trusted, guest, IoT, and lab wireless |
 | Phase 5 - Monitoring and Operations | ⏳ Planned | Monitoring updates, dashboards, runbooks, backups, validation procedures |
 
-Hardware refresh (2026-09-27): the ER605 and TL-SG2210P were replaced by a UniFi Dream Machine Pro and a USW-24-PoE in an equivalent-state cutover. The network stayed the same (flat `192.168.68.0/24`, same gateway, DHCP, and DNS), and the Deco units stay in AP mode. Phase 1 documents the ER605 and Omada cutover as it happened; Phase 2 onward runs on the UniFi hardware.
+Phase 1 documents the ER605 and Omada cutover as it happened. The 2026-09-27 UniFi refresh kept the same flat LAN, gateway, DHCP, and DNS behavior. Phase 2 onward uses the UniFi hardware.
 
 ---
 
@@ -175,8 +176,7 @@ Hardware refresh (2026-09-27): the ER605 and TL-SG2210P were replaced by a UniFi
 
 | Diagram | Status | Link |
 |---|---:|---|
-| Topology before the UniFi refresh (Omada, flat) | Done | [View](diagrams/current-topology.md) |
-| Current Topology (UniFi, flat) | Planned | Migration done 2026-09-27; diagram not drawn yet |
+| Current Topology (UniFi, flat) | Done | [View](diagrams/current-topology.md) |
 | Phase 2 - VLAN Segmentation Design | Planned | Coming soon |
 | Phase 3 - Firewall Policy Flow | Planned | Coming soon |
 
@@ -189,13 +189,13 @@ Hardware refresh (2026-09-27): the ER605 and TL-SG2210P were replaced by a UniFi
 | AT&T Fiber Connection | WAN connectivity |
 | ONT / Optical Network Terminal | Fiber handoff |
 | AT&T Gateway with IP Passthrough | ISP gateway |
-| TP-Link ER605 | Dedicated router/firewall |
-| TP-Link TL-SG2210P | Managed PoE switch |
+| UniFi UDM Pro | Dedicated router/firewall |
+| UniFi USW-24-PoE | Managed PoE switch |
 | TP-Link Deco Mesh | Wireless access points in AP mode |
 | Raspberry Pi 3B+ | Primary Pi-hole DNS node |
 | Raspberry Pi 3B | Secondary Pi-hole DNS node |
 | Dell OptiPlex Proxmox Host | Virtualization host |
-| Omada Controller LXC | Network controller |
+| UniFi Network | Network management on the UDM Pro |
 | Docker Monitoring VM | Monitoring service host |
 | Admin Workstation / Laptop | Testing and management endpoint |
 
@@ -205,9 +205,9 @@ Hardware refresh (2026-09-27): the ER605 and TL-SG2210P were replaced by a UniFi
 
 | Tool / Service | Purpose |
 |---|---|
-| Omada SDN Controller | Centralized management for router and switch |
-| TP-Link ER605 | Routing, firewalling, DHCP, and WAN handoff |
-| TP-Link TL-SG2210P | Managed switching and future VLAN trunk/access ports |
+| UniFi Network | Centralized management for router and switch |
+| UniFi UDM Pro | Routing, firewalling, DHCP, and WAN handoff |
+| UniFi USW-24-PoE | Managed switching and future VLAN trunk/access ports |
 | Pi-hole | DNS filtering and visibility |
 | Keepalived | DNS virtual IP failover |
 | Gravity Sync | Pi-hole configuration synchronization |
@@ -222,7 +222,7 @@ Hardware refresh (2026-09-27): the ER605 and TL-SG2210P were replaced by a UniFi
 
 ---
 
-## Phase 1 Validation Summary
+## Historical Phase 1 Validation Summary (ER605 and Omada)
 
 | Validation Area | Result |
 |---|---:|
@@ -304,5 +304,7 @@ This repository is part of a broader infrastructure lab portfolio.
 | Repository | Focus | Relationship |
 |---|---|---|
 | [Home Network Infrastructure Lab](https://github.com/stayZ3RO/dns) | HA DNS, Pi-hole, Unbound, monitoring, Tailscale, Proxmox, RustDesk | Provides the core infrastructure foundation used by this project |
-| [Home Network Managed Infrastructure Lab](https://github.com/stayZ3RO/netlab) | Managed router, switching, VLANs, firewall policy, network segmentation | Expands the home lab into managed network infrastructure |
+| [Home Network Managed Infrastructure Lab](https://github.com/stayZ3RO/netlab) | Managed router and switching; VLANs, firewall policy, and segmentation planned | Expands the home lab into managed network infrastructure |
 | [VPS Cloud Infrastructure Lab](https://github.com/stayZ3RO/vps-lab) | Linux VPS hardening, Docker, DNS, HTTPS, monitoring, backups, secure access | Extends infrastructure operations into cloud-hosted services |
+
+See the [portfolio](https://chrisalorenzo.com/) for the live project index.
