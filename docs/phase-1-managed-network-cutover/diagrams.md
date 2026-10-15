@@ -16,20 +16,22 @@ The diagrams should make the network easy to understand without requiring access
 
 ---
 
-## Diagram Evidence Table
+## PNG Exports (Not Tracked)
+
+The inline physical, DNS, and monitoring diagrams below are available. The PNG exports listed here are not tracked in this repository.
 
 | Diagram | Status | Purpose |
 |---|---:|---|
-| `diagrams/phase-1-managed-network-cutover/physical-topology.png` | ⏳ Pending | Shows ISP handoff, AT&T Gateway, ER605, managed switch, APs, and infrastructure devices. |
-| `diagrams/phase-1-managed-network-cutover/logical-topology.png` | ⏳ Pending | Shows routing, DNS, DHCP, monitoring, and management relationships. |
-| `diagrams/phase-1-managed-network-cutover/dns-resolution-flow.png` | ⏳ Pending | Shows client DNS path through Pi-hole VIP, active Pi-hole node, and Unbound. |
-| `diagrams/phase-1-managed-network-cutover/monitoring-flow.png` | ⏳ Pending | Shows Prometheus, Grafana, Alertmanager, and alerting flow. |
+| `diagrams/phase-1-managed-network-cutover/physical-topology.png` | Not tracked | Shows ISP handoff, AT&T Gateway, ER605, managed switch, APs, and infrastructure devices. |
+| `diagrams/phase-1-managed-network-cutover/logical-topology.png` | Not tracked | Shows routing, DNS, DHCP, monitoring, and management relationships. |
+| `diagrams/phase-1-managed-network-cutover/dns-resolution-flow.png` | Not tracked | Shows client DNS path through Pi-hole VIP, active Pi-hole node, and Unbound. |
+| `diagrams/phase-1-managed-network-cutover/monitoring-flow.png` | Not tracked | Shows Prometheus, Grafana, Alertmanager, and alerting flow. |
 
 ---
 
 ## Diagram Gallery
 
-The physical and DNS flow diagrams below record the historical Phase 1 cutover.
+The inline diagrams below record the historical Phase 1 cutover.
 
 ---
 

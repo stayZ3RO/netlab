@@ -210,7 +210,7 @@ Phase 1 documents the ER605 and Omada cutover as it happened. The 2026-09-27 Uni
 | UniFi USW-24-PoE | Managed switching and future VLAN trunk/access ports |
 | Pi-hole | DNS filtering and visibility |
 | Keepalived | DNS virtual IP failover |
-| Gravity Sync | Pi-hole configuration synchronization |
+| Nebula Sync | Pi-hole configuration synchronization |
 | Unbound | Local recursive DNS resolution |
 | Proxmox | Virtualization platform |
 | Prometheus | Metrics collection |
@@ -300,6 +300,8 @@ To build and document a realistic managed home network infrastructure lab that d
 ## Related Infrastructure Labs
 
 This repository is part of a broader infrastructure lab portfolio.
+
+Forgejo is the primary Git host; GitHub is a push mirror, and CI runs only on GitHub mirror push events. The links below point to the public GitHub mirrors.
 
 | Repository | Focus | Relationship |
 |---|---|---|
