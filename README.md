@@ -11,7 +11,7 @@
 
 ---
 
-This repository documents Project 2 of my home network infrastructure lab. Phase 1 records the ER605 and Omada cutover. A later equivalent-state refresh put a UniFi UDM Pro and USW-24-PoE at the network core on 2026-09-27. Deco nodes remain in AP mode, and the LAN remains flat. VLAN segmentation and firewall policy are planned.
+This repository documents Project 2 of my home network infrastructure lab. Phase 1 records the ER605 and Omada cutover. The Omada controller from that phase is historical and is not part of the current network. A later equivalent-state refresh put a UniFi UDM Pro and USW-24-PoE at the network core on 2026-09-27. Deco nodes remain in AP mode, and the LAN remains flat. VLAN segmentation and firewall policy are planned.
 
 Project 1 focused on building reliable core infrastructure services such as HA DNS, Unbound recursive DNS, monitoring, alerting, Tailscale remote access, Proxmox-hosted services, and operational validation.
 
