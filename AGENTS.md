@@ -2,7 +2,7 @@
 
 Read these first:
 
-1. `CURRENT-STATUS.md`: Phase 1 complete, managed network baseline ready for VLAN segmentation
+1. `phase-state.md`: Phase 1 complete, managed network baseline ready for VLAN segmentation
 2. `ROADMAP.md`
 3. `LESSONS-LEARNED.md`
 4. `CHANGELOG.md`
