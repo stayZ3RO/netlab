@@ -23,7 +23,7 @@ Project 2 builds on that foundation by moving the network to managed routing and
 
 | Area | Link |
 |---|---|
-| Current Status | [CURRENT-STATUS.md](CURRENT-STATUS.md) |
+| Current Status | [phase-state.md](phase-state.md) |
 | Roadmap | [ROADMAP.md](ROADMAP.md) |
 | Changelog | [CHANGELOG.md](CHANGELOG.md) |
 | Lessons Learned | [LESSONS-LEARNED.md](LESSONS-LEARNED.md) |
