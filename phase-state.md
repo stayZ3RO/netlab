@@ -99,6 +99,6 @@ This keeps the project clean:
 
 ## Summary
 
-Phase 1 successfully moved the network to a managed infrastructure foundation.
+Phase 1 successfully moved the network to a managed infrastructure foundation, and the 2026-09-27 UniFi hardware refresh (UDM Pro and USW-24-PoE) replaced the original router and switch.
 
 The environment is now ready for VLAN design, segmentation planning, firewall policy work, and SSID-to-VLAN mapping.
