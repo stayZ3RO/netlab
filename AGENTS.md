@@ -13,7 +13,7 @@ Project 2 of the home network lab: the historical ER605/Omada cutover, followed 
 
 ## Directories
 
-`configs/`, `diagrams/`, `docs/`, `screenshots/`, `screenshots-redacted/`
+`configs/`, `diagrams/`, `docs/`, `screenshots/`, `screenshots-redacted/`, `scripts/` (relative-link checker used by the docs-check workflows)
 
 ## Rules
 
