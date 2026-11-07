@@ -29,7 +29,7 @@ Project 2 builds on that foundation by moving the network to managed routing and
 | Lessons Learned | [LESSONS-LEARNED.md](LESSONS-LEARNED.md) |
 | Phase 1 Documentation | [docs/phase-1-managed-network-cutover/](docs/phase-1-managed-network-cutover/) |
 | Architecture Diagrams | [diagrams/](diagrams/) |
-| Screenshots | [screenshots/](screenshots/) |
+| Screenshots | [screenshots-redacted/phase-1-managed-network-cutover/](screenshots-redacted/phase-1-managed-network-cutover/) |
 | Config Examples | [configs/](configs/) |
 
 ---
