@@ -26,7 +26,7 @@ Validate that the managed network cutover was successful and that all core servi
 | Managed switch online | ✅ Passed | [Managed Switch Online in Omada](../../screenshots-redacted/phase-1-managed-network-cutover/05-managed-switch-online-in-omada.png) |
 | Switch port mapping | ✅ Passed | [Managed Switch Port Map](../../screenshots-redacted/phase-1-managed-network-cutover/06-managed-switch-port-map.png) |
 | PoE status for Pi nodes | ✅ Passed | [PoE Status for Pi Nodes](../../screenshots-redacted/phase-1-managed-network-cutover/07-poe-status-pi-nodes.png) |
-| Wired client DHCP | ✅ Passed | [Wired Client DHCP from ER605](../../screenshots-redacted/phase-1-managed-network-cutover/10-wired-client-dhcp-from-er605.png) |
+| Wired client DHCP | ✅ Passed | Screenshot withdrawn because it exposed client hardware identifiers |
 | Wireless client DHCP | ✅ Passed | [Wi-Fi Client DHCP from ER605](../../screenshots-redacted/phase-1-managed-network-cutover/11-wifi-client-dhcp-from-er605.png) |
 | DNS through Pi-hole VIP | ✅ Passed | [DNS Validation Through Pi-hole VIP](../../screenshots-redacted/phase-1-managed-network-cutover/12-dns-validation-pihole-vip.png) |
 | Pi-hole query visibility | ✅ Passed | [Pi-hole Queries After Cutover](../../screenshots-redacted/phase-1-managed-network-cutover/13-pihole-queries-after-cutover.png) |
@@ -45,7 +45,7 @@ DHCP was validated from both wired and wireless clients.
 
 | Client Type | Result | Evidence |
 |---|---:|---|
-| Wired client | ✅ Passed | [Wired Client DHCP from ER605](../../screenshots-redacted/phase-1-managed-network-cutover/10-wired-client-dhcp-from-er605.png) |
+| Wired client | ✅ Passed | Screenshot withdrawn because it exposed client hardware identifiers |
 | Wireless client | ✅ Passed | [Wi-Fi Client DHCP from ER605](../../screenshots-redacted/phase-1-managed-network-cutover/11-wifi-client-dhcp-from-er605.png) |
 
 ---

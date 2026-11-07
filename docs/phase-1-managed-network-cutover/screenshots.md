@@ -26,7 +26,6 @@ These historical Phase 1 screenshots validate that routing, switching, DHCP, DNS
 | [Managed Switch Online in Omada](../../screenshots-redacted/phase-1-managed-network-cutover/05-managed-switch-online-in-omada.png) | Managed Switch | Confirms the managed switch is online and visible in Omada. |
 | [Managed Switch Port Map](../../screenshots-redacted/phase-1-managed-network-cutover/06-managed-switch-port-map.png) | Managed Switch | Shows active switch ports and physical connectivity. |
 | [PoE Status for Pi Nodes](../../screenshots-redacted/phase-1-managed-network-cutover/07-poe-status-pi-nodes.png) | Power / Switching | Shows PoE status for infrastructure nodes connected to the managed switch. |
-| [Wired Client DHCP from ER605](../../screenshots-redacted/phase-1-managed-network-cutover/10-wired-client-dhcp-from-er605.png) | Client Validation | Confirms a wired client received DHCP from the ER605-controlled network. |
 | [Wi-Fi Client DHCP from ER605](../../screenshots-redacted/phase-1-managed-network-cutover/11-wifi-client-dhcp-from-er605.png) | Wireless Validation | Confirms a wireless client received DHCP from the ER605 while Deco operated in AP mode. |
 | [Pi-hole Queries After Cutover](../../screenshots-redacted/phase-1-managed-network-cutover/13-pihole-queries-after-cutover.png) | DNS | Shows Pi-hole receiving queries after the managed network cutover. |
 | [HA DNS VIP Reachable After Cutover](../../screenshots-redacted/phase-1-managed-network-cutover/14-ha-dns-vip-reachable-after-cutover.png) | DNS High Availability | Confirms the HA DNS virtual IP remained reachable. |
@@ -85,14 +84,6 @@ Shows active switch ports and physical connectivity.
 ![PoE Status for Pi Nodes](../../screenshots-redacted/phase-1-managed-network-cutover/07-poe-status-pi-nodes.png)
 
 Shows PoE status for infrastructure nodes connected to the managed switch.
-
----
-
-### Wired Client DHCP from ER605
-
-![Wired Client DHCP from ER605](../../screenshots-redacted/phase-1-managed-network-cutover/10-wired-client-dhcp-from-er605.png)
-
-Confirms a wired client received DHCP from the ER605-controlled network.
 
 ---
 
