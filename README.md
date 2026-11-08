@@ -29,7 +29,7 @@ Project 2 builds on that foundation by moving the network to managed routing and
 | Lessons Learned | [LESSONS-LEARNED.md](LESSONS-LEARNED.md) |
 | Phase 1 Documentation | [docs/phase-1-managed-network-cutover/](docs/phase-1-managed-network-cutover/) |
 | Architecture Diagrams | [diagrams/](diagrams/) |
-| Screenshots | [screenshots/](screenshots/) |
+| Screenshots | [screenshots-redacted/phase-1-managed-network-cutover/](screenshots-redacted/phase-1-managed-network-cutover/) |
 | Config Examples | [configs/](configs/) |
 
 ---
@@ -301,7 +301,7 @@ To build and document a realistic managed home network infrastructure lab that d
 
 This repository is part of a broader infrastructure lab portfolio.
 
-Forgejo is the primary Git host; GitHub is a push mirror, and CI runs only on GitHub mirror push events. The links below point to the public GitHub mirrors.
+Forgejo is the primary Git host; GitHub is a push mirror, and CI runs on push in both Forgejo and the GitHub mirror. The links below point to the public GitHub mirrors.
 
 | Repository | Focus | Relationship |
 |---|---|---|

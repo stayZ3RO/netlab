@@ -13,7 +13,7 @@
 
 This roadmap tracks the progression of the managed network infrastructure lab.
 
-Project 2 starts with a completed managed router/switch cutover and will continue into VLAN segmentation, firewall policy, SSID mapping, and monitoring updates.
+Project 2 starts with a completed managed router/switch cutover. On 2026-09-27 the ER605 and TL-SG2210P were replaced by a UniFi UDM Pro and USW-24-PoE, which are the current network core. The project will continue into VLAN segmentation, firewall policy, SSID mapping, and monitoring updates.
 
 ---
 
