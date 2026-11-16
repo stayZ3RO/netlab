@@ -11,7 +11,7 @@
 
 ---
 
-This repository documents Project 2 of my home network infrastructure lab. Phase 1 records the ER605 and Omada cutover. The Omada controller from that phase is historical and is not part of the current network. A later equivalent-state refresh put a UniFi UDM Pro and USW-24-PoE at the network core on 2026-09-27. Deco nodes remain in AP mode, and the LAN remains flat. VLAN segmentation and firewall policy are planned.
+This repository documents Project 2 of my home network infrastructure lab. Phase 1 records the ER605 and Omada cutover. The Omada controller from that phase is historical and is not part of the current network. A later equivalent-state refresh put a UniFi UDM Pro and USW-24-PoE at the network core on 2026-09-27. Deco nodes remain in AP mode. Phase 2 segmentation is in progress: on 2026-11-15 and 2026-11-16 the wired owner stations moved to a Clients segment and the Deco mesh to an untrusted Wi-Fi segment, behind zone-based firewall policies. Servers have not moved yet.
 
 Project 1 focused on building reliable core infrastructure services such as HA DNS, Unbound recursive DNS, monitoring, alerting, Tailscale remote access, Proxmox-hosted services, and operational validation.
 
@@ -28,6 +28,7 @@ Project 2 builds on that foundation by moving the network to managed routing and
 | Changelog | [CHANGELOG.md](CHANGELOG.md) |
 | Lessons Learned | [LESSONS-LEARNED.md](LESSONS-LEARNED.md) |
 | Phase 1 Documentation | [docs/phase-1-managed-network-cutover/](docs/phase-1-managed-network-cutover/) |
+| Phase 2 Documentation | [docs/phase-2-vlan-segmentation/](docs/phase-2-vlan-segmentation/) |
 | Architecture Diagrams | [diagrams/](diagrams/) |
 | Screenshots | [screenshots-redacted/phase-1-managed-network-cutover/](screenshots-redacted/phase-1-managed-network-cutover/) |
 | Config Examples | [configs/](configs/) |
@@ -138,8 +139,8 @@ Proxmox / UniFi Network / Pi-hole / Monitoring Services
 |---|---:|---|
 | Phase 1 - Managed Router/Switch Cutover | ✅ Complete | ER605 cutover, managed switch integration, Deco AP mode, baseline validation |
 | UniFi Hardware Refresh (2026-09-27) | ✅ Complete | UDM Pro and USW-24-PoE replaced the ER605 and TL-SG2210P without adding segmentation |
-| Phase 2 - VLAN Segmentation | ⏳ Planned | VLAN IDs, subnet plan, network zones, DHCP scopes |
-| Phase 3 - Firewall Policy | ⏳ Planned | Inter-VLAN rules, restricted management access, IoT/guest isolation |
+| Phase 2 - VLAN Segmentation | 🔄 In Progress | Segments and zones live; stations and Wi-Fi mesh moved; servers still to move |
+| Phase 3 - Firewall Policy | ⏳ Planned | Per-service policies as servers move; the base zone matrix landed in Phase 2 |
 | Phase 4 - Wireless SSID Mapping | ⏳ Planned | SSID-to-VLAN mapping for trusted, guest, IoT, and lab wireless |
 | Phase 5 - Monitoring and Operations | ⏳ Planned | Monitoring updates, dashboards, runbooks, backups, validation procedures |
 
@@ -165,7 +166,7 @@ Phase 1 documents the ER605 and Omada cutover as it happened. The 2026-09-27 Uni
 
 | Phase | Link |
 |---|---|
-| Phase 2 - VLAN Segmentation | [View](docs/phase-2-vlan-segmentation/) |
+| Phase 2 - VLAN Segmentation (in progress) | [View](docs/phase-2-vlan-segmentation/) |
 | Phase 3 - Firewall Policy | [View](docs/phase-3-firewall-policy/) |
 | Phase 4 - Wireless SSID Mapping | [View](docs/phase-4-wireless-ssid-mapping/) |
 | Phase 5 - Monitoring and Operations | [View](docs/phase-5-monitoring-and-operations/) |
@@ -177,7 +178,7 @@ Phase 1 documents the ER605 and Omada cutover as it happened. The 2026-09-27 Uni
 | Diagram | Status | Link |
 |---|---:|---|
 | Current Topology (UniFi, flat) | Done | [View](diagrams/current-topology.md) |
-| Phase 2 - VLAN Segmentation Design | Planned | Coming soon |
+| Phase 2 - VLAN Segmentation Design | Done | [View](docs/phase-2-vlan-segmentation/overview.md#logical-design) |
 | Phase 3 - Firewall Policy Flow | Planned | Coming soon |
 
 ---
@@ -250,7 +251,7 @@ Phase 1 documents the ER605 and Omada cutover as it happened. The 2026-09-27 Uni
 - Secrets, tokens, passwords, and private keys are excluded from this repository.
 - Management services are intended to remain LAN-only or privately reachable through trusted remote access.
 - Screenshots are sanitized before publishing.
-- VLAN and firewall policies will be documented in later phases before being treated as complete.
+- Segment addressing in the Phase 2 documents is example addressing and does not match the real plan.
 
 ---
 
@@ -275,17 +276,12 @@ This project demonstrates practical infrastructure skills across:
 
 ## Future Work
 
-The next major phase is VLAN segmentation.
+Phase 2 segmentation is in progress. Remaining work:
 
-Planned work includes:
-
-- Define VLAN IDs
-- Build a subnet plan
-- Separate trusted, guest, IoT, infrastructure, and lab networks
-- Configure VLAN-aware switch ports
-- Map SSIDs to VLANs
-- Build an inter-VLAN firewall policy matrix
-- Validate allowed and denied traffic
+- Move server guests into the Lab services, CI and Agents segments, one sitting each
+- Map trusted and guest SSIDs to segments on a new access point
+- Delete the temporary bridge policy
+- Test DNS failover and each subnet router alone from the new segments
 - Update monitoring targets after segmentation
 - Document final diagrams and screenshots
 

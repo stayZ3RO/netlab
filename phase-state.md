@@ -1,11 +1,11 @@
 # Current Status
 
-![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
+![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
 ![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
-![Phase](https://img.shields.io/badge/Phase-2%20VLAN%20Segmentation%20(planned)-purple)
+![Phase](https://img.shields.io/badge/Phase-2%20VLAN%20Segmentation%20(in%20progress)-purple)
 ![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
 
-## UniFi Network Core Live; VLAN Segmentation Planned
+## UniFi Network Core Live; VLAN Segmentation In Progress
 
 ---
 
@@ -13,7 +13,9 @@
 
 **Phase 1 and the 2026-09-27 UniFi hardware refresh are complete.**
 
-The current network core is a UniFi UDM Pro and USW-24-PoE. The LAN remains flat, with Deco nodes in AP mode. Phase 1 documents the earlier ER605 and Omada cutover as history.
+The current network core is a UniFi UDM Pro and USW-24-PoE, with Deco nodes in AP mode. Phase 1 documents the earlier ER605 and Omada cutover as history.
+
+**Phase 2 is in progress.** The first sitting, 2026-11-15 to 2026-11-16, moved the wired owner stations to a Clients segment and the Deco mesh to an untrusted Wi-Fi segment, behind zone-based policies. Servers are still on the Servers segment. See [Phase 2](docs/phase-2-vlan-segmentation/).
 
 ---
 
@@ -31,6 +33,8 @@ The current network core is a UniFi UDM Pro and USW-24-PoE. The LAN remains flat
 | Proxmox service validation | ✅ Complete | Proxmox-hosted services remained reachable |
 | Monitoring validation | ✅ Complete | Grafana and Prometheus remained available |
 | Remote access validation | ✅ Complete | Remote management path remained functional |
+| Phase 2 segments and zones | ✅ Complete | Seven segments, one zone each, blocked between zones by default |
+| Phase 2 station and Wi-Fi moves | ✅ Complete | Canary, wired stations, Deco mesh, admin station last |
 
 ---
 
@@ -58,17 +62,14 @@ UniFi USW-24-PoE Managed Switch
 
 ## Current Focus
 
-The next focus is **Phase 2: VLAN Segmentation**.
+The current focus is finishing **Phase 2: VLAN Segmentation**.
 
-Planned work:
+Remaining work:
 
-- Define network zones
-- Assign VLAN IDs
-- Create subnet plan
-- Plan DHCP scopes
-- Plan firewall rules
-- Determine trunk/access port layout
-- Prepare SSID-to-VLAN mapping
+- Move server guests into the Lab services, CI and Agents segments, one sitting each
+- Test DNS failover and each subnet router alone from the new segments
+- Delete the temporary bridge policy
+- Prepare SSID-to-VLAN mapping for the new access point (Phase 4)
 
 ---
 
@@ -92,8 +93,9 @@ This keeps the project clean:
 | Add final logical topology diagram | ⏳ Pending |
 | Add sanitized Phase 1 Omada screenshots | ✅ Complete |
 | Add switch port mapping | ⏳ Pending |
-| Start VLAN/subnet design | ⏳ Pending |
-| Build firewall policy matrix | ⏳ Pending |
+| Start VLAN/subnet design | ✅ Complete |
+| Build firewall policy matrix | ✅ Complete (base zone matrix) |
+| Add redacted Phase 2 screenshots | ⏳ Pending |
 
 ---
 
@@ -101,4 +103,4 @@ This keeps the project clean:
 
 Phase 1 successfully moved the network to a managed infrastructure foundation, and the 2026-09-27 UniFi hardware refresh (UDM Pro and USW-24-PoE) replaced the original router and switch.
 
-The environment is now ready for VLAN design, segmentation planning, firewall policy work, and SSID-to-VLAN mapping.
+Phase 2 has segments, zones and narrow allows in place, with the owner stations and Wi-Fi moved. Server moves, SSID mapping and per-service firewall policy come next.

@@ -1,8 +1,10 @@
 # Current Topology: UniFi (flat LAN)
 
 The UDM Pro and USW-24-PoE have been the network core since the
-2026-09-27 equivalent-state cutover. Deco nodes remain access points. The LAN
-is still flat; VLAN segmentation and inter-VLAN firewall policy are planned.
+2026-09-27 equivalent-state cutover. Deco nodes remain access points. Since
+2026-11-16 the owner stations and the Deco mesh sit on their own segments
+([Phase 2](../docs/phase-2-vlan-segmentation/overview.md#logical-design)); the servers
+are still on one network, shown here.
 The [Phase 1 diagrams](../docs/phase-1-managed-network-cutover/diagrams.md)
 record the earlier ER605 and Omada network.
 
