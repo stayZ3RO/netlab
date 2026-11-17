@@ -18,6 +18,8 @@ Planned
 
 Create and validate firewall rules for inter-VLAN access control.
 
+The base zone matrix and the first narrow allows were built in [Phase 2](../phase-2-vlan-segmentation/overview.md#zone-matrix). This phase covers the policies written as servers move into their segments.
+
 ## Planned Work
 
 - Define policy matrix

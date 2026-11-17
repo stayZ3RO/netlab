@@ -2,7 +2,7 @@
 
 ![Status](https://img.shields.io/badge/Status-Active-blue)
 ![Project](https://img.shields.io/badge/Project-Managed%20Network%20Infrastructure-blue)
-![Phase](https://img.shields.io/badge/Phase-2%20VLAN%20Segmentation-purple)
+![Phase](https://img.shields.io/badge/Phase-2%20VLAN%20Segmentation%20(in%20progress)-purple)
 ![Docs](https://img.shields.io/badge/Docs-Portfolio%20Ready-informational)
 
 ## Project Roadmap for VLAN Segmentation, Firewall Policy, SSID Mapping, and Operations
@@ -40,22 +40,33 @@ Documentation:
 
 ## Phase 2 - VLAN Segmentation
 
-Status: ⏳ Planned
+Status: 🔄 In Progress (first sitting 2026-11-15 to 2026-11-16)
 
-Goals:
+Done:
 
-- Define VLAN IDs
-- Create IP subnet plan
-- Separate trusted, guest, IoT, infrastructure, and lab networks
-- Document gateway interfaces
-- Plan DHCP scopes
-- Validate routing per VLAN
+- Seven segments by role, one firewall zone each
+- Narrow allows for DNS, the reverse proxy, owner admin ports, VPN transport and remote desktop
+- DNS answering routed segments
+- Canary station, remaining wired stations, the Wi-Fi mesh, then the admin station moved and tested
+
+Remaining:
+
+- Move server guests into Lab services, CI and Agents, one sitting each
+- Test DNS failover and each subnet router alone from the new segments
+- Delete the temporary bridge policy
+
+Documentation:
+
+- [Phase 2 Overview](docs/phase-2-vlan-segmentation/overview.md)
+- [Phase 2 Implementation](docs/phase-2-vlan-segmentation/implementation.md)
+- [Phase 2 Validation](docs/phase-2-vlan-segmentation/validation.md)
+- [Phase 2 Lessons Learned](docs/phase-2-vlan-segmentation/lessons-learned.md)
 
 ---
 
 ## Phase 3 - Firewall Policy
 
-Status: ⏳ Planned
+Status: ⏳ Planned (the base zone matrix landed in Phase 2)
 
 Goals:
 

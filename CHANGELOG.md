@@ -8,6 +8,16 @@
 
 ---
 
+### 2026-11-16 Phase 2 segmentation, first sitting
+
+- Created seven segments by role, one firewall zone each, with zone defaults blocking traffic between zones.
+- Added narrow allows: DNS from Clients and Wi-Fi, HTTPS to the reverse proxy, owner admin ports from a named station range, Tailscale UDP 41641 from Wi-Fi to the two subnet routers, remote desktop ports from Clients, and router admin blocks for Wi-Fi and Guests.
+- Changed the DNS resolvers to answer routed segments, with host firewall rules limiting the sources.
+- Moved a canary station, the other wired stations, the Deco mesh, then the admin station.
+- Found that the Tailscale clients accepted subnet routes by default and bypassed the gateway; turned it off on wired stations.
+- Found a Docker-published port filtered in `DOCKER-USER`, not by the host firewall, and a subnet router pair with uneven host firewalls.
+- Added Phase 2 overview, implementation, validation, lessons learned and screenshot list. Addressing in them is example addressing.
+
 ### 2026-09-27 UniFi hardware refresh
 
 - Replaced the ER605 and TL-SG2210P with a UDM Pro and USW-24-PoE in an equivalent-state cutover.
