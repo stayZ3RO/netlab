@@ -96,6 +96,6 @@ Each move was a switch port profile change, so rollback was the same change back
 
 ## Open Items From the Sitting
 
-- Make the `DOCKER-USER` rule persistent across reboots. Not confirmed yet.
+- The `DOCKER-USER` rule is written to the firewall's persistent rules file and passed a syntax check. A reboot test is still open.
 - Delete the paused bridge policy.
 - Put the host rules into code so a rebuild carries them.
