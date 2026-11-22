@@ -276,14 +276,7 @@ This project demonstrates practical infrastructure skills across:
 
 ## Future Work
 
-Phase 2 segmentation is in progress. Remaining work:
-
-- Move server guests into the Lab services, CI and Agents segments, one sitting each
-- Map trusted and guest SSIDs to segments on a new access point
-- Delete the temporary bridge policy
-- Test DNS failover and each subnet router alone from the new segments
-- Update monitoring targets after segmentation
-- Document final diagrams and screenshots
+See [Open Items](phase-state.md#open-items) for the remaining work.
 
 ---
 

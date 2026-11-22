@@ -49,11 +49,7 @@ Done:
 - DNS answering routed segments
 - Canary station, remaining wired stations, the Wi-Fi mesh, then the admin station moved and tested
 
-Remaining:
-
-- Move server guests into Lab services, CI and Agents, one sitting each
-- Test DNS failover and each subnet router alone from the new segments
-- Delete the temporary bridge policy
+See [Open Items](phase-state.md#open-items) for the remaining work.
 
 Documentation:
 
