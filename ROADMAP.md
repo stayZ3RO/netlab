@@ -68,6 +68,8 @@ Documentation:
 
 Status: ⏳ Planned (the base zone matrix landed in Phase 2)
 
+[Phase 3 documentation](docs/phase-3-firewall-policy/)
+
 Goals:
 
 - Define inter-VLAN access rules
@@ -83,6 +85,8 @@ Goals:
 
 Status: ⏳ Planned
 
+[Phase 4 documentation](docs/phase-4-wireless-ssid-mapping/)
+
 Goals:
 
 - Map SSIDs to VLANs
@@ -96,6 +100,8 @@ Goals:
 ## Phase 5 - Monitoring and Operations
 
 Status: ⏳ Planned
+
+[Phase 5 documentation](docs/phase-5-monitoring-and-operations/)
 
 Goals:
 
