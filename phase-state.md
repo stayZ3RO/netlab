@@ -73,6 +73,18 @@ Remaining work:
 
 ---
 
+## Open Items
+
+- Move server guests into the Lab services, CI and Agents segments, one sitting each.
+- Test DNS failover and each subnet router alone from the new segments.
+- Verify the persisted `DOCKER-USER` rule after a reboot. See the [implementation record](docs/phase-2-vlan-segmentation/implementation.md) and [validation record](docs/phase-2-vlan-segmentation/validation.md).
+- Delete the temporary bridge policy.
+- Prepare and apply trusted and guest SSID mappings on the new access point in Phase 4.
+- Update monitoring targets after segmentation.
+- Document the final diagrams and screenshots.
+
+---
+
 ## Why VLANs Were Deferred
 
 VLANs were intentionally deferred until after the router/switch cutover was completed and validated.
