@@ -1,4 +1,4 @@
-# Current Topology: UniFi (flat LAN)
+# Current Topology: UniFi (servers segment)
 
 The UDM Pro and USW-24-PoE have been the network core since the
 2026-09-27 equivalent-state cutover. Deco nodes remain access points. Since

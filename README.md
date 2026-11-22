@@ -177,7 +177,7 @@ Phase 1 documents the ER605 and Omada cutover as it happened. The 2026-09-27 Uni
 
 | Diagram | Status | Link |
 |---|---:|---|
-| Current Topology (UniFi, flat) | Done | [View](diagrams/current-topology.md) |
+| Current Topology (UniFi, servers segment) | Done | [View](diagrams/current-topology.md) |
 | Phase 2 - VLAN Segmentation Design | Done | [View](docs/phase-2-vlan-segmentation/overview.md#logical-design) |
 | Phase 3 - Firewall Policy Flow | Planned | Coming soon |
 
