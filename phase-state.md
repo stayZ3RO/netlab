@@ -64,12 +64,7 @@ UniFi USW-24-PoE Managed Switch
 
 The current focus is finishing **Phase 2: VLAN Segmentation**.
 
-Remaining work:
-
-- Move server guests into the Lab services, CI and Agents segments, one sitting each
-- Test DNS failover and each subnet router alone from the new segments
-- Delete the temporary bridge policy
-- Prepare SSID-to-VLAN mapping for the new access point (Phase 4)
+See [Open Items](#open-items) for the remaining work.
 
 ---
 
