@@ -290,6 +290,8 @@ To build and document a realistic managed home network infrastructure lab that d
 
 This repository is part of a broader infrastructure lab portfolio.
 
+Run `bash scripts/check.sh` from the repo root before opening a PR.
+
 Forgejo is the primary Git host; GitHub is a push mirror, and CI runs on push in both Forgejo and the GitHub mirror. The links below point to the public GitHub mirrors.
 
 | Repository | Focus | Relationship |

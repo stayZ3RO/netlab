@@ -13,7 +13,11 @@ Project 2 of the home network lab: the historical ER605/Omada cutover, followed 
 
 ## Directories
 
-`configs/`, `diagrams/`, `docs/`, `screenshots/`, `screenshots-redacted/`, `scripts/` (relative-link checker used by the docs-check workflows)
+`configs/`, `diagrams/`, `docs/`, `screenshots/`, `screenshots-redacted/`, `scripts/` (repository checks)
+
+## Checks
+
+Run `bash scripts/check.sh` before opening a PR. Run `bash scripts/test-checks.sh` when changing the checks.
 
 ## Rules
 
