@@ -14,7 +14,7 @@ This folder contains architecture diagrams for the managed network infrastructur
 
 | Diagram | Status |
 |---|---:|
-| [Current Topology (UniFi, flat)](current-topology.md) | Done |
+| [Current Topology (UniFi, servers segment)](current-topology.md) | Done |
 | [Phase 1 Diagrams (ER605 and Omada, historical)](../docs/phase-1-managed-network-cutover/diagrams.md) | Done |
 | [Phase 2 - VLAN Segmentation Design](../docs/phase-2-vlan-segmentation/overview.md#logical-design) | Done |
 | Phase 3 - Firewall Policy Flow | Planned |

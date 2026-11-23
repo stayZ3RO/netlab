@@ -177,7 +177,7 @@ Phase 1 documents the ER605 and Omada cutover as it happened. The 2026-09-27 Uni
 
 | Diagram | Status | Link |
 |---|---:|---|
-| Current Topology (UniFi, flat) | Done | [View](diagrams/current-topology.md) |
+| Current Topology (UniFi, servers segment) | Done | [View](diagrams/current-topology.md) |
 | Phase 2 - VLAN Segmentation Design | Done | [View](docs/phase-2-vlan-segmentation/overview.md#logical-design) |
 | Phase 3 - Firewall Policy Flow | Planned | Coming soon |
 
@@ -276,14 +276,7 @@ This project demonstrates practical infrastructure skills across:
 
 ## Future Work
 
-Phase 2 segmentation is in progress. Remaining work:
-
-- Move server guests into the Lab services, CI and Agents segments, one sitting each
-- Map trusted and guest SSIDs to segments on a new access point
-- Delete the temporary bridge policy
-- Test DNS failover and each subnet router alone from the new segments
-- Update monitoring targets after segmentation
-- Document final diagrams and screenshots
+See [Open Items](phase-state.md#open-items) for the remaining work.
 
 ---
 
@@ -296,6 +289,8 @@ To build and document a realistic managed home network infrastructure lab that d
 ## Related Infrastructure Labs
 
 This repository is part of a broader infrastructure lab portfolio.
+
+Run `bash scripts/check.sh` from the repo root before opening a PR.
 
 Forgejo is the primary Git host; GitHub is a push mirror, and CI runs on push in both Forgejo and the GitHub mirror. The links below point to the public GitHub mirrors.
 
