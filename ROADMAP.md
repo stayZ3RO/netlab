@@ -49,11 +49,7 @@ Done:
 - DNS answering routed segments
 - Canary station, remaining wired stations, the Wi-Fi mesh, then the admin station moved and tested
 
-Remaining:
-
-- Move server guests into Lab services, CI and Agents, one sitting each
-- Test DNS failover and each subnet router alone from the new segments
-- Delete the temporary bridge policy
+See [Open Items](phase-state.md#open-items) for the remaining work.
 
 Documentation:
 
@@ -67,6 +63,8 @@ Documentation:
 ## Phase 3 - Firewall Policy
 
 Status: ⏳ Planned (the base zone matrix landed in Phase 2)
+
+[Phase 3 documentation](docs/phase-3-firewall-policy/)
 
 Goals:
 
@@ -83,6 +81,8 @@ Goals:
 
 Status: ⏳ Planned
 
+[Phase 4 documentation](docs/phase-4-wireless-ssid-mapping/)
+
 Goals:
 
 - Map SSIDs to VLANs
@@ -96,6 +96,8 @@ Goals:
 ## Phase 5 - Monitoring and Operations
 
 Status: ⏳ Planned
+
+[Phase 5 documentation](docs/phase-5-monitoring-and-operations/)
 
 Goals:
 
